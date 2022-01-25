@@ -1,0 +1,121 @@
+<ion-content class="scroll-y bg-color h-100">
+  <ion-row>
+    <ion-col class="mb-15">
+      <img class="voyaImage"
+        src="https://purepng.com/public/uploads/large/purepng.com-voya-financial-logologobrand-logoiconslogos-251519938224xbtfv.png" />
+    </ion-col>
+  </ion-row>
+  <ion-row class="mb-20">
+    <ion-col>
+
+      <ion-list class="sm-85">
+        
+        <ion-grid class="border-bottom">
+          <ion-row>
+            <ion-col size="1"></ion-col>
+            <ion-col size="11">
+              <p class="mb-5 font-16 font-label-color">Username</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col size="1"></ion-col>
+              <ion-col size="9">
+                <ion-input class="p-0 font-16" id="username" [(ngModel)]="username" type="text"></ion-input>
+              </ion-col>
+            <ion-col size="2">
+            </ion-col>
+          </ion-row>
+          
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col size="1"></ion-col>
+            <ion-col size="11">
+              <p class="mb-5 font-16 font-label-color">Password</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col size="1"></ion-col>
+              <ion-col size="9">
+                <ion-input class="p-0 font-16" id="password" [(ngModel)]="password" type="password"></ion-input>
+              </ion-col>
+              <ion-col size="2" class="m-auto ">
+                <ion-icon id="hide" name="eye-sharp" class="hide font-22 icon-orange" (click)="togglePassword('hide')"></ion-icon>
+                <ion-icon id="show" name="eye-off" class="show font-22 icon-orange" (click)="togglePassword('show')"></ion-icon>
+              </ion-col>
+          </ion-row>
+          
+        </ion-grid>
+
+       
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="m-auto sm-85 m-20 dark">
+
+    <ion-col size="6">
+      <ion-row  size="12">
+        <ion-col size="4" class="p-0 m-auto">
+          <ion-toggle></ion-toggle>
+        </ion-col>
+        <ion-col size="8" class="p-0 m-auto">
+          <span class="font-14">Remember Me</span>
+        </ion-col>
+
+      </ion-row>
+    </ion-col>
+    <!-- <ion-col>
+      <ion-toggle color="primary"></ion-toggle><span></span>
+    </ion-col> -->
+
+    <ion-col size="6">
+      <ion-row  size="12">
+        <ion-col size="4" class="p-0 m-auto">
+          <ion-toggle [(ngModel)]="completed" (ionChange)="checkFaceId($event)" checked="false"></ion-toggle>
+        </ion-col>
+        <ion-col size="8" class="p-0 m-auto">
+          <span class="font-14">Touch/Face ID</span>
+        </ion-col>
+
+      </ion-row>
+    </ion-col>
+
+  </ion-row>
+
+
+
+
+
+  <ion-row class="m-auto m-20">
+    <ion-col size="2">
+      <!-- <ion-button expand="block">Block Button</ion-button> -->
+    </ion-col>
+    <ion-col size="8">
+      <ion-button shape="round" (click)="loginWithCredential()" color="btncolor" expand="block">Login</ion-button>
+    </ion-col>
+    <ion-col size="2">
+      <!-- <ion-button expand="block">Block Button</ion-button> -->
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="dark">
+    <ion-col ><p class="text-center"><a class="text-underline">Forgot Username/Password?</a></p></ion-col>
+  </ion-row>
+
+  <ion-row class="sm-85 dark">
+    <ion-col size="6" class="m-auto"><p class="text-center mb-0">First time user?</p></ion-col>
+    <ion-col size="6">
+      <ion-button (click)="removeData()" color="btncolortemp" shape="round" class="b-radius border-color" expand="block">Register</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div class="font-10 m-20 dark">
+    <p class="m-auto"> Version 4.12</p>
+    <p class="m-auto">© 2019, Voya All Rights Reserved.</p>
+    <p class="m-auto">Voya and Voya logo are registered trademarks of Voya Services Company</p>
+  </div>
+</ion-content>
